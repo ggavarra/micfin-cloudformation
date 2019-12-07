@@ -1,0 +1,1437 @@
+{
+  "Resources": {
+    "MFVPC96E277C8": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/Resource"
+      }
+    },
+    "MFVPCPublicSubnet1Subnet1E6F83DD": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/18",
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC/PublicSubnet1"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet1/Subnet"
+      }
+    },
+    "MFVPCPublicSubnet1RouteTable03354F32": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet1/RouteTable"
+      }
+    },
+    "MFVPCPublicSubnet1RouteTableAssociation5DB1F5FB": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MFVPCPublicSubnet1RouteTable03354F32"
+        },
+        "SubnetId": {
+          "Ref": "MFVPCPublicSubnet1Subnet1E6F83DD"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet1/RouteTableAssociation"
+      }
+    },
+    "MFVPCPublicSubnet1DefaultRoute9E265586": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MFVPCPublicSubnet1RouteTable03354F32"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "MFVPCIGW7B4BF082"
+        }
+      },
+      "DependsOn": [
+        "MFVPCVPCGW1B4BCED6"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet1/DefaultRoute"
+      }
+    },
+    "MFVPCPublicSubnet1EIPF925F2B4": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc"
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet1/EIP"
+      }
+    },
+    "MFVPCPublicSubnet1NATGateway81D108CE": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "MFVPCPublicSubnet1EIPF925F2B4",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "MFVPCPublicSubnet1Subnet1E6F83DD"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet1/NATGateway"
+      }
+    },
+    "MFVPCPublicSubnet2Subnet85C10D62": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.64.0/18",
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC/PublicSubnet2"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet2/Subnet"
+      }
+    },
+    "MFVPCPublicSubnet2RouteTable76EDC2CB": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet2/RouteTable"
+      }
+    },
+    "MFVPCPublicSubnet2RouteTableAssociation82AC029A": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MFVPCPublicSubnet2RouteTable76EDC2CB"
+        },
+        "SubnetId": {
+          "Ref": "MFVPCPublicSubnet2Subnet85C10D62"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet2/RouteTableAssociation"
+      }
+    },
+    "MFVPCPublicSubnet2DefaultRouteA227823B": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MFVPCPublicSubnet2RouteTable76EDC2CB"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "MFVPCIGW7B4BF082"
+        }
+      },
+      "DependsOn": [
+        "MFVPCVPCGW1B4BCED6"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet2/DefaultRoute"
+      }
+    },
+    "MFVPCPublicSubnet2EIPC2165E04": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc"
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet2/EIP"
+      }
+    },
+    "MFVPCPublicSubnet2NATGatewayF13A8F1C": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "MFVPCPublicSubnet2EIPC2165E04",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "MFVPCPublicSubnet2Subnet85C10D62"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PublicSubnet2/NATGateway"
+      }
+    },
+    "MFVPCPrivateSubnet1Subnet22D4C86F": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.128.0/18",
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC/PrivateSubnet1"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PrivateSubnet1/Subnet"
+      }
+    },
+    "MFVPCPrivateSubnet1RouteTable6BDE6113": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PrivateSubnet1/RouteTable"
+      }
+    },
+    "MFVPCPrivateSubnet1RouteTableAssociation6253410E": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MFVPCPrivateSubnet1RouteTable6BDE6113"
+        },
+        "SubnetId": {
+          "Ref": "MFVPCPrivateSubnet1Subnet22D4C86F"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PrivateSubnet1/RouteTableAssociation"
+      }
+    },
+    "MFVPCPrivateSubnet1DefaultRoute1C6128B7": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MFVPCPrivateSubnet1RouteTable6BDE6113"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "MFVPCPublicSubnet1NATGateway81D108CE"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PrivateSubnet1/DefaultRoute"
+      }
+    },
+    "MFVPCPrivateSubnet2Subnet2849F9C7": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.192.0/18",
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC/PrivateSubnet2"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PrivateSubnet2/Subnet"
+      }
+    },
+    "MFVPCPrivateSubnet2RouteTable33E540B7": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC/PrivateSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PrivateSubnet2/RouteTable"
+      }
+    },
+    "MFVPCPrivateSubnet2RouteTableAssociationAC633CE1": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MFVPCPrivateSubnet2RouteTable33E540B7"
+        },
+        "SubnetId": {
+          "Ref": "MFVPCPrivateSubnet2Subnet2849F9C7"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PrivateSubnet2/RouteTableAssociation"
+      }
+    },
+    "MFVPCPrivateSubnet2DefaultRouteED43308A": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MFVPCPrivateSubnet2RouteTable33E540B7"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "MFVPCPublicSubnet2NATGatewayF13A8F1C"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/PrivateSubnet2/DefaultRoute"
+      }
+    },
+    "MFVPCIGW7B4BF082": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MFVPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/IGW"
+      }
+    },
+    "MFVPCVPCGW1B4BCED6": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        },
+        "InternetGatewayId": {
+          "Ref": "MFVPCIGW7B4BF082"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MFVPC/VPCGW"
+      }
+    },
+    "MicFinFleetInstanceSecurityGroup7DAD01E5": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "EcsCluster/MicFinFleet/InstanceSecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MicFinFleet"
+          }
+        ],
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/InstanceSecurityGroup/Resource"
+      }
+    },
+    "MicFinFleetInstanceRoleC416CA0A": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "ec2.",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MicFinFleet"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/InstanceRole/Resource"
+      }
+    },
+    "MicFinFleetInstanceRoleDefaultPolicy4172665E": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ecs:CreateCluster",
+                "ecs:DeregisterContainerInstance",
+                "ecs:DiscoverPollEndpoint",
+                "ecs:Poll",
+                "ecs:RegisterContainerInstance",
+                "ecs:StartTelemetrySession",
+                "ecs:Submit*",
+                "ecr:GetAuthorizationToken",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "MicFinFleetInstanceRoleDefaultPolicy4172665E",
+        "Roles": [
+          {
+            "Ref": "MicFinFleetInstanceRoleC416CA0A"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/InstanceRole/DefaultPolicy/Resource"
+      }
+    },
+    "MicFinFleetInstanceProfileB8B739DA": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "MicFinFleetInstanceRoleC416CA0A"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/InstanceProfile"
+      }
+    },
+    "MicFinFleetLaunchConfig46F4660B": {
+      "Type": "AWS::AutoScaling::LaunchConfiguration",
+      "Properties": {
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "t2.micro",
+        "AssociatePublicIpAddress": true,
+        "IamInstanceProfile": {
+          "Ref": "MicFinFleetInstanceProfileB8B739DA"
+        },
+        "SecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "MicFinFleetInstanceSecurityGroup7DAD01E5",
+              "GroupId"
+            ]
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "",
+              [
+                "#!/bin/bash\necho ECS_CLUSTER=",
+                {
+                  "Ref": "EcsCluster97242B84"
+                },
+                " >> /etc/ecs/ecs.config\nsudo iptables --insert FORWARD 1 --in-interface docker+ --destination 169.254.169.254/32 --jump DROP\nsudo service iptables save\necho ECS_AWSVPC_BLOCK_IMDS=true >> /etc/ecs/ecs.config"
+              ]
+            ]
+          }
+        }
+      },
+      "DependsOn": [
+        "MicFinFleetInstanceRoleDefaultPolicy4172665E",
+        "MicFinFleetInstanceRoleC416CA0A"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/LaunchConfig"
+      }
+    },
+    "MicFinFleetASG4DF3164D": {
+      "Type": "AWS::AutoScaling::AutoScalingGroup",
+      "Properties": {
+        "MaxSize": "1",
+        "MinSize": "1",
+        "DesiredCapacity": "1",
+        "LaunchConfigurationName": {
+          "Ref": "MicFinFleetLaunchConfig46F4660B"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "PropagateAtLaunch": true,
+            "Value": "EcsCluster/MicFinFleet"
+          }
+        ],
+        "VPCZoneIdentifier": [
+          {
+            "Ref": "MFVPCPublicSubnet1Subnet1E6F83DD"
+          },
+          {
+            "Ref": "MFVPCPublicSubnet2Subnet85C10D62"
+          }
+        ]
+      },
+      "UpdatePolicy": {
+        "AutoScalingReplacingUpdate": {
+          "WillReplace": true
+        },
+        "AutoScalingScheduledAction": {
+          "IgnoreUnmodifiedGroupSizeProperties": true
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/ASG"
+      }
+    },
+    "MicFinFleetDrainECSHookFunctionServiceRole27FE3B33": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MicFinFleet"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/DrainECSHook/Function/ServiceRole/Resource"
+      }
+    },
+    "MicFinFleetDrainECSHookFunctionServiceRoleDefaultPolicy2CF6F0A7": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DescribeInstanceAttribute",
+                "ec2:DescribeInstanceStatus",
+                "ec2:DescribeHosts"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": "autoscaling:CompleteLifecycleAction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":autoscaling:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":autoScalingGroup:*:autoScalingGroupName/",
+                    {
+                      "Ref": "MicFinFleetASG4DF3164D"
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": [
+                "ecs:DescribeContainerInstances",
+                "ecs:DescribeTasks"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "ecs:ListContainerInstances",
+                "ecs:SubmitContainerStateChange",
+                "ecs:SubmitTaskStateChange"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "EcsCluster97242B84",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "ecs:UpdateContainerInstancesState",
+                "ecs:ListTasks"
+              ],
+              "Condition": {
+                "ArnEquals": {
+                  "ecs:cluster": {
+                    "Fn::GetAtt": [
+                      "EcsCluster97242B84",
+                      "Arn"
+                    ]
+                  }
+                }
+              },
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "MicFinFleetDrainECSHookFunctionServiceRoleDefaultPolicy2CF6F0A7",
+        "Roles": [
+          {
+            "Ref": "MicFinFleetDrainECSHookFunctionServiceRole27FE3B33"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/DrainECSHook/Function/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "MicFinFleetDrainECSHookFunction29AC3499": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "ZipFile": "import boto3, json, os, time\n\necs = boto3.client('ecs')\nautoscaling = boto3.client('autoscaling')\n\n\ndef lambda_handler(event, context):\n  print(json.dumps(event))\n  cluster = os.environ['CLUSTER']\n  snsTopicArn = event['Records'][0]['Sns']['TopicArn']\n  lifecycle_event = json.loads(event['Records'][0]['Sns']['Message'])\n  instance_id = lifecycle_event.get('EC2InstanceId')\n  if not instance_id:\n    print('Got event without EC2InstanceId: %s', json.dumps(event))\n    return\n\n  instance_arn = container_instance_arn(cluster, instance_id)\n  print('Instance %s has container instance ARN %s' % (lifecycle_event['EC2InstanceId'], instance_arn))\n\n  if not instance_arn:\n    return\n\n  while has_tasks(cluster, instance_arn):\n    time.sleep(10)\n\n  try:\n    print('Terminating instance %s' % instance_id)\n    autoscaling.complete_lifecycle_action(\n        LifecycleActionResult='CONTINUE',\n        **pick(lifecycle_event, 'LifecycleHookName', 'LifecycleActionToken', 'AutoScalingGroupName'))\n  except Exception as e:\n    # Lifecycle action may have already completed.\n    print(str(e))\n\n\ndef container_instance_arn(cluster, instance_id):\n  \"\"\"Turn an instance ID into a container instance ARN.\"\"\"\n  arns = ecs.list_container_instances(cluster=cluster, filter='ec2InstanceId==' + instance_id)['containerInstanceArns']\n  if not arns:\n    return None\n  return arns[0]\n\n\ndef has_tasks(cluster, instance_arn):\n  \"\"\"Return True if the instance is running tasks for the given cluster.\"\"\"\n  instances = ecs.describe_container_instances(cluster=cluster, containerInstances=[instance_arn])['containerInstances']\n  if not instances:\n    return False\n  instance = instances[0]\n\n  if instance['status'] == 'ACTIVE':\n    # Start draining, then try again later\n    set_container_instance_to_draining(cluster, instance_arn)\n    return True\n\n  tasks = instance['runningTasksCount'] + instance['pendingTasksCount']\n  print('Instance %s has %s tasks' % (instance_arn, tasks))\n\n  return tasks > 0\n\n\ndef set_container_instance_to_draining(cluster, instance_arn):\n  ecs.update_container_instances_state(\n      cluster=cluster,\n      containerInstances=[instance_arn], status='DRAINING')\n\n\ndef pick(dct, *keys):\n  \"\"\"Pick a subset of a dict.\"\"\"\n  return {k: v for k, v in dct.items() if k in keys}\n"
+        },
+        "Handler": "index.lambda_handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "MicFinFleetDrainECSHookFunctionServiceRole27FE3B33",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.6",
+        "Environment": {
+          "Variables": {
+            "CLUSTER": {
+              "Ref": "EcsCluster97242B84"
+            }
+          }
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MicFinFleet"
+          }
+        ],
+        "Timeout": 310
+      },
+      "DependsOn": [
+        "MicFinFleetDrainECSHookFunctionServiceRoleDefaultPolicy2CF6F0A7",
+        "MicFinFleetDrainECSHookFunctionServiceRole27FE3B33"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/DrainECSHook/Function/Resource"
+      }
+    },
+    "MicFinFleetDrainECSHookFunctionAllowInvokeEcsClusterMicFinFleetLifecycleHookDrainHookTopicD86BC631575DDE04": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "MicFinFleetDrainECSHookFunction29AC3499",
+            "Arn"
+          ]
+        },
+        "Principal": "sns.amazonaws.com",
+        "SourceArn": {
+          "Ref": "MicFinFleetLifecycleHookDrainHookTopic2D7654EF"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/DrainECSHook/Function/AllowInvoke:EcsClusterMicFinFleetLifecycleHookDrainHookTopicD86BC631"
+      }
+    },
+    "MicFinFleetDrainECSHookFunctionTopic153A0668": {
+      "Type": "AWS::SNS::Subscription",
+      "Properties": {
+        "Protocol": "lambda",
+        "TopicArn": {
+          "Ref": "MicFinFleetLifecycleHookDrainHookTopic2D7654EF"
+        },
+        "Endpoint": {
+          "Fn::GetAtt": [
+            "MicFinFleetDrainECSHookFunction29AC3499",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/DrainECSHook/Function/Topic/Resource"
+      }
+    },
+    "MicFinFleetLifecycleHookDrainHookRole78416C14": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "autoscaling.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MicFinFleet"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/LifecycleHookDrainHook/Role/Resource"
+      }
+    },
+    "MicFinFleetLifecycleHookDrainHookRoleDefaultPolicy9B7D3F61": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sns:Publish",
+              "Effect": "Allow",
+              "Resource": {
+                "Ref": "MicFinFleetLifecycleHookDrainHookTopic2D7654EF"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "MicFinFleetLifecycleHookDrainHookRoleDefaultPolicy9B7D3F61",
+        "Roles": [
+          {
+            "Ref": "MicFinFleetLifecycleHookDrainHookRole78416C14"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/LifecycleHookDrainHook/Role/DefaultPolicy/Resource"
+      }
+    },
+    "MicFinFleetLifecycleHookDrainHookTopic2D7654EF": {
+      "Type": "AWS::SNS::Topic",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/MicFinFleet"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/LifecycleHookDrainHook/Topic/Resource"
+      }
+    },
+    "MicFinFleetLifecycleHookDrainHook3F51ABDC": {
+      "Type": "AWS::AutoScaling::LifecycleHook",
+      "Properties": {
+        "AutoScalingGroupName": {
+          "Ref": "MicFinFleetASG4DF3164D"
+        },
+        "LifecycleTransition": "autoscaling:EC2_INSTANCE_TERMINATING",
+        "DefaultResult": "CONTINUE",
+        "HeartbeatTimeout": 300,
+        "NotificationTargetARN": {
+          "Ref": "MicFinFleetLifecycleHookDrainHookTopic2D7654EF"
+        },
+        "RoleARN": {
+          "Fn::GetAtt": [
+            "MicFinFleetLifecycleHookDrainHookRole78416C14",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "MicFinFleetLifecycleHookDrainHookRoleDefaultPolicy9B7D3F61",
+        "MicFinFleetLifecycleHookDrainHookRole78416C14"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/MicFinFleet/LifecycleHookDrainHook/Resource"
+      }
+    },
+    "EcsCluster97242B84": {
+      "Type": "AWS::ECS::Cluster",
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupInstanceSecurityGroup912E1231": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/EcsCluster/DefaultAutoScalingGroup"
+          }
+        ],
+        "VpcId": {
+          "Ref": "MFVPC96E277C8"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupInstanceRole3C026863": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "ec2.",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/EcsCluster/DefaultAutoScalingGroup"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/InstanceRole/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupInstanceRoleDefaultPolicy04DC6C80": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ecs:CreateCluster",
+                "ecs:DeregisterContainerInstance",
+                "ecs:DiscoverPollEndpoint",
+                "ecs:Poll",
+                "ecs:RegisterContainerInstance",
+                "ecs:StartTelemetrySession",
+                "ecs:Submit*",
+                "ecr:GetAuthorizationToken",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "EcsClusterDefaultAutoScalingGroupInstanceRoleDefaultPolicy04DC6C80",
+        "Roles": [
+          {
+            "Ref": "EcsClusterDefaultAutoScalingGroupInstanceRole3C026863"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/InstanceRole/DefaultPolicy/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupInstanceProfile2CE606B3": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "EcsClusterDefaultAutoScalingGroupInstanceRole3C026863"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/InstanceProfile"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupLaunchConfigB7E376C1": {
+      "Type": "AWS::AutoScaling::LaunchConfiguration",
+      "Properties": {
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "t2.micro",
+        "IamInstanceProfile": {
+          "Ref": "EcsClusterDefaultAutoScalingGroupInstanceProfile2CE606B3"
+        },
+        "SecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "EcsClusterDefaultAutoScalingGroupInstanceSecurityGroup912E1231",
+              "GroupId"
+            ]
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "",
+              [
+                "#!/bin/bash\necho ECS_CLUSTER=",
+                {
+                  "Ref": "EcsCluster97242B84"
+                },
+                " >> /etc/ecs/ecs.config\nsudo iptables --insert FORWARD 1 --in-interface docker+ --destination 169.254.169.254/32 --jump DROP\nsudo service iptables save\necho ECS_AWSVPC_BLOCK_IMDS=true >> /etc/ecs/ecs.config"
+              ]
+            ]
+          }
+        }
+      },
+      "DependsOn": [
+        "EcsClusterDefaultAutoScalingGroupInstanceRoleDefaultPolicy04DC6C80",
+        "EcsClusterDefaultAutoScalingGroupInstanceRole3C026863"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/LaunchConfig"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupASGC1A785DB": {
+      "Type": "AWS::AutoScaling::AutoScalingGroup",
+      "Properties": {
+        "MaxSize": "1",
+        "MinSize": "1",
+        "DesiredCapacity": "1",
+        "LaunchConfigurationName": {
+          "Ref": "EcsClusterDefaultAutoScalingGroupLaunchConfigB7E376C1"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "PropagateAtLaunch": true,
+            "Value": "EcsCluster/EcsCluster/DefaultAutoScalingGroup"
+          }
+        ],
+        "VPCZoneIdentifier": [
+          {
+            "Ref": "MFVPCPrivateSubnet1Subnet22D4C86F"
+          },
+          {
+            "Ref": "MFVPCPrivateSubnet2Subnet2849F9C7"
+          }
+        ]
+      },
+      "UpdatePolicy": {
+        "AutoScalingReplacingUpdate": {
+          "WillReplace": true
+        },
+        "AutoScalingScheduledAction": {
+          "IgnoreUnmodifiedGroupSizeProperties": true
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/ASG"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionServiceRole94543EDA": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/EcsCluster/DefaultAutoScalingGroup"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/ServiceRole/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionServiceRoleDefaultPolicyA45BF396": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DescribeInstanceAttribute",
+                "ec2:DescribeInstanceStatus",
+                "ec2:DescribeHosts"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": "autoscaling:CompleteLifecycleAction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":autoscaling:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":autoScalingGroup:*:autoScalingGroupName/",
+                    {
+                      "Ref": "EcsClusterDefaultAutoScalingGroupASGC1A785DB"
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": [
+                "ecs:DescribeContainerInstances",
+                "ecs:DescribeTasks"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "ecs:ListContainerInstances",
+                "ecs:SubmitContainerStateChange",
+                "ecs:SubmitTaskStateChange"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "EcsCluster97242B84",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "ecs:UpdateContainerInstancesState",
+                "ecs:ListTasks"
+              ],
+              "Condition": {
+                "ArnEquals": {
+                  "ecs:cluster": {
+                    "Fn::GetAtt": [
+                      "EcsCluster97242B84",
+                      "Arn"
+                    ]
+                  }
+                }
+              },
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionServiceRoleDefaultPolicyA45BF396",
+        "Roles": [
+          {
+            "Ref": "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionServiceRole94543EDA"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionE17A5F5E": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "ZipFile": "import boto3, json, os, time\n\necs = boto3.client('ecs')\nautoscaling = boto3.client('autoscaling')\n\n\ndef lambda_handler(event, context):\n  print(json.dumps(event))\n  cluster = os.environ['CLUSTER']\n  snsTopicArn = event['Records'][0]['Sns']['TopicArn']\n  lifecycle_event = json.loads(event['Records'][0]['Sns']['Message'])\n  instance_id = lifecycle_event.get('EC2InstanceId')\n  if not instance_id:\n    print('Got event without EC2InstanceId: %s', json.dumps(event))\n    return\n\n  instance_arn = container_instance_arn(cluster, instance_id)\n  print('Instance %s has container instance ARN %s' % (lifecycle_event['EC2InstanceId'], instance_arn))\n\n  if not instance_arn:\n    return\n\n  while has_tasks(cluster, instance_arn):\n    time.sleep(10)\n\n  try:\n    print('Terminating instance %s' % instance_id)\n    autoscaling.complete_lifecycle_action(\n        LifecycleActionResult='CONTINUE',\n        **pick(lifecycle_event, 'LifecycleHookName', 'LifecycleActionToken', 'AutoScalingGroupName'))\n  except Exception as e:\n    # Lifecycle action may have already completed.\n    print(str(e))\n\n\ndef container_instance_arn(cluster, instance_id):\n  \"\"\"Turn an instance ID into a container instance ARN.\"\"\"\n  arns = ecs.list_container_instances(cluster=cluster, filter='ec2InstanceId==' + instance_id)['containerInstanceArns']\n  if not arns:\n    return None\n  return arns[0]\n\n\ndef has_tasks(cluster, instance_arn):\n  \"\"\"Return True if the instance is running tasks for the given cluster.\"\"\"\n  instances = ecs.describe_container_instances(cluster=cluster, containerInstances=[instance_arn])['containerInstances']\n  if not instances:\n    return False\n  instance = instances[0]\n\n  if instance['status'] == 'ACTIVE':\n    # Start draining, then try again later\n    set_container_instance_to_draining(cluster, instance_arn)\n    return True\n\n  tasks = instance['runningTasksCount'] + instance['pendingTasksCount']\n  print('Instance %s has %s tasks' % (instance_arn, tasks))\n\n  return tasks > 0\n\n\ndef set_container_instance_to_draining(cluster, instance_arn):\n  ecs.update_container_instances_state(\n      cluster=cluster,\n      containerInstances=[instance_arn], status='DRAINING')\n\n\ndef pick(dct, *keys):\n  \"\"\"Pick a subset of a dict.\"\"\"\n  return {k: v for k, v in dct.items() if k in keys}\n"
+        },
+        "Handler": "index.lambda_handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionServiceRole94543EDA",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.6",
+        "Environment": {
+          "Variables": {
+            "CLUSTER": {
+              "Ref": "EcsCluster97242B84"
+            }
+          }
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/EcsCluster/DefaultAutoScalingGroup"
+          }
+        ],
+        "Timeout": 310
+      },
+      "DependsOn": [
+        "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionServiceRoleDefaultPolicyA45BF396",
+        "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionServiceRole94543EDA"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionAllowInvokeEcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopic68D986B59682799F": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionE17A5F5E",
+            "Arn"
+          ]
+        },
+        "Principal": "sns.amazonaws.com",
+        "SourceArn": {
+          "Ref": "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicACD2D4A4"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/AllowInvoke:EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopic68D986B5"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionTopic8F34E394": {
+      "Type": "AWS::SNS::Subscription",
+      "Properties": {
+        "Protocol": "lambda",
+        "TopicArn": {
+          "Ref": "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicACD2D4A4"
+        },
+        "Endpoint": {
+          "Fn::GetAtt": [
+            "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionE17A5F5E",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/Topic/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookRoleA38EC83B": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "autoscaling.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/EcsCluster/DefaultAutoScalingGroup"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Role/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookRoleDefaultPolicy75002F88": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sns:Publish",
+              "Effect": "Allow",
+              "Resource": {
+                "Ref": "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicACD2D4A4"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookRoleDefaultPolicy75002F88",
+        "Roles": [
+          {
+            "Ref": "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookRoleA38EC83B"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Role/DefaultPolicy/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicACD2D4A4": {
+      "Type": "AWS::SNS::Topic",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "EcsCluster/EcsCluster/DefaultAutoScalingGroup"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Topic/Resource"
+      }
+    },
+    "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookFFA63029": {
+      "Type": "AWS::AutoScaling::LifecycleHook",
+      "Properties": {
+        "AutoScalingGroupName": {
+          "Ref": "EcsClusterDefaultAutoScalingGroupASGC1A785DB"
+        },
+        "LifecycleTransition": "autoscaling:EC2_INSTANCE_TERMINATING",
+        "DefaultResult": "CONTINUE",
+        "HeartbeatTimeout": 300,
+        "NotificationTargetARN": {
+          "Ref": "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicACD2D4A4"
+        },
+        "RoleARN": {
+          "Fn::GetAtt": [
+            "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookRoleA38EC83B",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookRoleDefaultPolicy75002F88",
+        "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookRoleA38EC83B"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "EcsCluster/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Resource"
+      }
+    }
+  },
+  "Parameters": {
+    "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+      "Default": "/aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id"
+    }
+  }
+}

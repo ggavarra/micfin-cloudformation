@@ -1,0 +1,1144 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "MicfinCdkStack": {
+        "id": "MicfinCdkStack",
+        "path": "MicfinCdkStack",
+        "children": {
+          "MicFinVpc": {
+            "id": "MicFinVpc",
+            "path": "MicfinCdkStack/MicFinVpc",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "MicfinCdkStack/MicFinVpc/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                  "aws:cdk:cloudformation:props": {
+                    "cidrBlock": "10.0.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "instanceTenancy": "default",
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "MicfinCdkStack/MicFinVpc"
+                      }
+                    ]
+                  }
+                }
+              },
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "MicfinCdkStack/MicFinVpc/PublicSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.0.0/18",
+                        "vpcId": "${Token[TOKEN.21]}",
+                        "availabilityZone": "${Token[TOKEN.18]}",
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/MicFinVpc/PublicSubnet1"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet1/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": "${Token[TOKEN.21]}",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/MicFinVpc/PublicSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": "${Token[TOKEN.32]}",
+                        "subnetId": "${Token[TOKEN.28]}"
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": "${Token[TOKEN.32]}",
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": "${Token[TOKEN.71]}"
+                      }
+                    }
+                  },
+                  "EIP": {
+                    "id": "EIP",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet1/EIP",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                      "aws:cdk:cloudformation:props": {
+                        "domain": "vpc"
+                      }
+                    }
+                  },
+                  "NATGateway": {
+                    "id": "NATGateway",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet1/NATGateway",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "allocationId": "${Token[TOKEN.76]}",
+                        "subnetId": "${Token[TOKEN.28]}",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/MicFinVpc/PublicSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "MicfinCdkStack/MicFinVpc/PublicSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.64.0/18",
+                        "vpcId": "${Token[TOKEN.21]}",
+                        "availabilityZone": "${Token[TOKEN.20]}",
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/MicFinVpc/PublicSubnet2"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet2/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": "${Token[TOKEN.21]}",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/MicFinVpc/PublicSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": "${Token[TOKEN.44]}",
+                        "subnetId": "${Token[TOKEN.40]}"
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": "${Token[TOKEN.44]}",
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": "${Token[TOKEN.71]}"
+                      }
+                    }
+                  },
+                  "EIP": {
+                    "id": "EIP",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet2/EIP",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                      "aws:cdk:cloudformation:props": {
+                        "domain": "vpc"
+                      }
+                    }
+                  },
+                  "NATGateway": {
+                    "id": "NATGateway",
+                    "path": "MicfinCdkStack/MicFinVpc/PublicSubnet2/NATGateway",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "allocationId": "${Token[TOKEN.80]}",
+                        "subnetId": "${Token[TOKEN.40]}",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/MicFinVpc/PublicSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "PrivateSubnet1": {
+                "id": "PrivateSubnet1",
+                "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.128.0/18",
+                        "vpcId": "${Token[TOKEN.21]}",
+                        "availabilityZone": "${Token[TOKEN.18]}",
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/MicFinVpc/PrivateSubnet1"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Private"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet1/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": "${Token[TOKEN.21]}",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/MicFinVpc/PrivateSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": "${Token[TOKEN.56]}",
+                        "subnetId": "${Token[TOKEN.52]}"
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": "${Token[TOKEN.56]}",
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": "${Token[TOKEN.78]}"
+                      }
+                    }
+                  }
+                }
+              },
+              "PrivateSubnet2": {
+                "id": "PrivateSubnet2",
+                "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.192.0/18",
+                        "vpcId": "${Token[TOKEN.21]}",
+                        "availabilityZone": "${Token[TOKEN.20]}",
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/MicFinVpc/PrivateSubnet2"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Private"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet2/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": "${Token[TOKEN.21]}",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/MicFinVpc/PrivateSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": "${Token[TOKEN.68]}",
+                        "subnetId": "${Token[TOKEN.64]}"
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "MicfinCdkStack/MicFinVpc/PrivateSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": "${Token[TOKEN.68]}",
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": "${Token[TOKEN.82]}"
+                      }
+                    }
+                  }
+                }
+              },
+              "IGW": {
+                "id": "IGW",
+                "path": "MicfinCdkStack/MicFinVpc/IGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "MicfinCdkStack/MicFinVpc"
+                      }
+                    ]
+                  }
+                }
+              },
+              "VPCGW": {
+                "id": "VPCGW",
+                "path": "MicfinCdkStack/MicFinVpc/VPCGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                  "aws:cdk:cloudformation:props": {
+                    "vpcId": "${Token[TOKEN.21]}",
+                    "internetGatewayId": "${Token[TOKEN.71]}"
+                  }
+                }
+              }
+            }
+          },
+          "EcsCluster": {
+            "id": "EcsCluster",
+            "path": "MicfinCdkStack/EcsCluster",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "MicfinCdkStack/EcsCluster/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::Cluster",
+                  "aws:cdk:cloudformation:props": {
+                    "clusterName": "${Token[TOKEN.85]}"
+                  }
+                }
+              },
+              "DefaultAutoScalingGroup": {
+                "id": "DefaultAutoScalingGroup",
+                "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup",
+                "children": {
+                  "InstanceSecurityGroup": {
+                    "id": "InstanceSecurityGroup",
+                    "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "groupDescription": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup",
+                            "groupName": "${Token[TOKEN.92]}",
+                            "securityGroupEgress": "<unresolved-lazy>",
+                            "securityGroupIngress": "<unresolved-lazy>",
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup"
+                              }
+                            ],
+                            "vpcId": "${Token[TOKEN.21]}"
+                          }
+                        }
+                      },
+                      "from MicfinCdkStackLBSecurityGroupF2681DE5:8080": {
+                        "id": "from MicfinCdkStackLBSecurityGroupF2681DE5:8080",
+                        "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup/from MicfinCdkStackLBSecurityGroupF2681DE5:8080",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                          "aws:cdk:cloudformation:props": {
+                            "ipProtocol": "tcp",
+                            "description": "Load balancer to target",
+                            "fromPort": 8080,
+                            "groupId": "${Token[TOKEN.94]}",
+                            "sourceSecurityGroupId": "${Token[TOKEN.203]}",
+                            "toPort": 8080
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "InstanceRole": {
+                    "id": "InstanceRole",
+                    "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "${Token[ec2.amazonaws.com.98]}"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              "#{Token[TOKEN.99]}"
+                            ],
+                            "roleName": "${Token[TOKEN.97]}",
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "ecs:CreateCluster",
+                                        "ecs:DeregisterContainerInstance",
+                                        "ecs:DiscoverPollEndpoint",
+                                        "ecs:Poll",
+                                        "ecs:RegisterContainerInstance",
+                                        "ecs:StartTelemetrySession",
+                                        "ecs:Submit*",
+                                        "ecr:GetAuthorizationToken",
+                                        "logs:CreateLogStream",
+                                        "logs:PutLogEvents"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "${Token[TOKEN.120]}",
+                                "groups": [
+                                  "#{Token[TOKEN.123]}"
+                                ],
+                                "roles": [
+                                  "#{Token[TOKEN.121]}"
+                                ],
+                                "users": [
+                                  "#{Token[TOKEN.122]}"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "InstanceProfile": {
+                    "id": "InstanceProfile",
+                    "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceProfile",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::InstanceProfile",
+                      "aws:cdk:cloudformation:props": {
+                        "roles": [
+                          "${Token[TOKEN.105]}"
+                        ]
+                      }
+                    }
+                  },
+                  "LaunchConfig": {
+                    "id": "LaunchConfig",
+                    "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LaunchConfig",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AutoScaling::LaunchConfiguration",
+                      "aws:cdk:cloudformation:props": {
+                        "imageId": "${Token[TOKEN.109]}",
+                        "instanceType": "t2.xlarge",
+                        "iamInstanceProfile": "${Token[TOKEN.113]}",
+                        "securityGroups": [
+                          "#{Token[TOKEN.112]}"
+                        ],
+                        "userData": "${Token[TOKEN.111]}"
+                      }
+                    }
+                  },
+                  "ASG": {
+                    "id": "ASG",
+                    "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/ASG",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AutoScaling::AutoScalingGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "maxSize": "1",
+                        "minSize": "1",
+                        "desiredCapacity": "1",
+                        "launchConfigurationName": "${Token[TOKEN.115]}",
+                        "loadBalancerNames": [
+                          "#{Token[TOKEN.116]}"
+                        ],
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup",
+                            "propagateAtLaunch": true
+                          }
+                        ],
+                        "targetGroupArns": [
+                          "#{Token[TOKEN.117]}"
+                        ],
+                        "vpcZoneIdentifier": [
+                          "${Token[TOKEN.52]}",
+                          "${Token[TOKEN.64]}"
+                        ]
+                      }
+                    }
+                  },
+                  "DrainECSHook": {
+                    "id": "DrainECSHook",
+                    "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook",
+                    "children": {
+                      "Function": {
+                        "id": "Function",
+                        "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function",
+                        "children": {
+                          "ServiceRole": {
+                            "id": "ServiceRole",
+                            "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/ServiceRole",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/ServiceRole/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                                  "aws:cdk:cloudformation:props": {
+                                    "assumeRolePolicyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "sts:AssumeRole",
+                                          "Effect": "Allow",
+                                          "Principal": {
+                                            "Service": "${Token[lambda.amazonaws.com.128]}"
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "managedPolicyArns": [
+                                      "#{Token[TOKEN.129]}"
+                                    ],
+                                    "roleName": "${Token[TOKEN.127]}",
+                                    "tags": [
+                                      {
+                                        "key": "Name",
+                                        "value": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "DefaultPolicy": {
+                                "id": "DefaultPolicy",
+                                "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/ServiceRole/DefaultPolicy",
+                                "children": {
+                                  "Resource": {
+                                    "id": "Resource",
+                                    "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/ServiceRole/DefaultPolicy/Resource",
+                                    "attributes": {
+                                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                      "aws:cdk:cloudformation:props": {
+                                        "policyDocument": {
+                                          "Statement": [
+                                            {
+                                              "Action": [
+                                                "ec2:DescribeInstances",
+                                                "ec2:DescribeInstanceAttribute",
+                                                "ec2:DescribeInstanceStatus",
+                                                "ec2:DescribeHosts"
+                                              ],
+                                              "Effect": "Allow",
+                                              "Resource": "*"
+                                            },
+                                            {
+                                              "Action": "autoscaling:CompleteLifecycleAction",
+                                              "Effect": "Allow",
+                                              "Resource": "arn:${Token[AWS::Partition.3]}:autoscaling:${Token[AWS::Region.4]}:${Token[AWS::AccountId.0]}:autoScalingGroup:*:autoScalingGroupName/${Token[TOKEN.119]}"
+                                            },
+                                            {
+                                              "Action": [
+                                                "ecs:DescribeContainerInstances",
+                                                "ecs:DescribeTasks"
+                                              ],
+                                              "Effect": "Allow",
+                                              "Resource": "*"
+                                            },
+                                            {
+                                              "Action": [
+                                                "ecs:ListContainerInstances",
+                                                "ecs:SubmitContainerStateChange",
+                                                "ecs:SubmitTaskStateChange"
+                                              ],
+                                              "Effect": "Allow",
+                                              "Resource": "${Token[TOKEN.88]}"
+                                            },
+                                            {
+                                              "Action": [
+                                                "ecs:UpdateContainerInstancesState",
+                                                "ecs:ListTasks"
+                                              ],
+                                              "Condition": {
+                                                "ArnEquals": {
+                                                  "ecs:cluster": "${Token[TOKEN.88]}"
+                                                }
+                                              },
+                                              "Effect": "Allow",
+                                              "Resource": "*"
+                                            }
+                                          ],
+                                          "Version": "2012-10-17"
+                                        },
+                                        "policyName": "${Token[TOKEN.168]}",
+                                        "groups": [
+                                          "#{Token[TOKEN.171]}"
+                                        ],
+                                        "roles": [
+                                          "#{Token[TOKEN.169]}"
+                                        ],
+                                        "users": [
+                                          "#{Token[TOKEN.170]}"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                              "aws:cdk:cloudformation:props": {
+                                "code": {
+                                  "zipFile": "import boto3, json, os, time\n\necs = boto3.client('ecs')\nautoscaling = boto3.client('autoscaling')\n\n\ndef lambda_handler(event, context):\n  print(json.dumps(event))\n  cluster = os.environ['CLUSTER']\n  snsTopicArn = event['Records'][0]['Sns']['TopicArn']\n  lifecycle_event = json.loads(event['Records'][0]['Sns']['Message'])\n  instance_id = lifecycle_event.get('EC2InstanceId')\n  if not instance_id:\n    print('Got event without EC2InstanceId: %s', json.dumps(event))\n    return\n\n  instance_arn = container_instance_arn(cluster, instance_id)\n  print('Instance %s has container instance ARN %s' % (lifecycle_event['EC2InstanceId'], instance_arn))\n\n  if not instance_arn:\n    return\n\n  while has_tasks(cluster, instance_arn):\n    time.sleep(10)\n\n  try:\n    print('Terminating instance %s' % instance_id)\n    autoscaling.complete_lifecycle_action(\n        LifecycleActionResult='CONTINUE',\n        **pick(lifecycle_event, 'LifecycleHookName', 'LifecycleActionToken', 'AutoScalingGroupName'))\n  except Exception as e:\n    # Lifecycle action may have already completed.\n    print(str(e))\n\n\ndef container_instance_arn(cluster, instance_id):\n  \"\"\"Turn an instance ID into a container instance ARN.\"\"\"\n  arns = ecs.list_container_instances(cluster=cluster, filter='ec2InstanceId==' + instance_id)['containerInstanceArns']\n  if not arns:\n    return None\n  return arns[0]\n\n\ndef has_tasks(cluster, instance_arn):\n  \"\"\"Return True if the instance is running tasks for the given cluster.\"\"\"\n  instances = ecs.describe_container_instances(cluster=cluster, containerInstances=[instance_arn])['containerInstances']\n  if not instances:\n    return False\n  instance = instances[0]\n\n  if instance['status'] == 'ACTIVE':\n    # Start draining, then try again later\n    set_container_instance_to_draining(cluster, instance_arn)\n    return True\n\n  tasks = instance['runningTasksCount'] + instance['pendingTasksCount']\n  print('Instance %s has %s tasks' % (instance_arn, tasks))\n\n  return tasks > 0\n\n\ndef set_container_instance_to_draining(cluster, instance_arn):\n  ecs.update_container_instances_state(\n      cluster=cluster,\n      containerInstances=[instance_arn], status='DRAINING')\n\n\ndef pick(dct, *keys):\n  \"\"\"Pick a subset of a dict.\"\"\"\n  return {k: v for k, v in dct.items() if k in keys}\n"
+                                },
+                                "handler": "index.lambda_handler",
+                                "role": "${Token[TOKEN.133]}",
+                                "runtime": "python3.6",
+                                "environment": "<unresolved-lazy>",
+                                "functionName": "${Token[TOKEN.125]}",
+                                "layers": [
+                                  "#{Token[TOKEN.136]}"
+                                ],
+                                "tags": [
+                                  {
+                                    "key": "Name",
+                                    "value": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup"
+                                  }
+                                ],
+                                "timeout": 310
+                              }
+                            }
+                          },
+                          "AllowInvoke:MicfinCdkStackEcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicAACCD7CB": {
+                            "id": "AllowInvoke:MicfinCdkStackEcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicAACCD7CB",
+                            "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/AllowInvoke:MicfinCdkStackEcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicAACCD7CB",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                              "aws:cdk:cloudformation:props": {
+                                "action": "lambda:InvokeFunction",
+                                "functionName": "${Token[TOKEN.141]}",
+                                "principal": "sns.amazonaws.com",
+                                "sourceArn": "${Token[TOKEN.156]}"
+                              }
+                            }
+                          },
+                          "Topic": {
+                            "id": "Topic",
+                            "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/Topic",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/Topic/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::SNS::Subscription",
+                                  "aws:cdk:cloudformation:props": {
+                                    "protocol": "lambda",
+                                    "topicArn": "${Token[TOKEN.156]}",
+                                    "endpoint": "${Token[TOKEN.141]}"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "LifecycleHookDrainHook": {
+                    "id": "LifecycleHookDrainHook",
+                    "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook",
+                    "children": {
+                      "Role": {
+                        "id": "Role",
+                        "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Role",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Role/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                              "aws:cdk:cloudformation:props": {
+                                "assumeRolePolicyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Principal": {
+                                        "Service": "${Token[autoscaling.amazonaws.com.144]}"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "managedPolicyArns": [
+                                  "#{Token[TOKEN.145]}"
+                                ],
+                                "roleName": "${Token[TOKEN.143]}",
+                                "tags": [
+                                  {
+                                    "key": "Name",
+                                    "value": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup"
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          "DefaultPolicy": {
+                            "id": "DefaultPolicy",
+                            "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Role/DefaultPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Role/DefaultPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "sns:Publish",
+                                          "Effect": "Allow",
+                                          "Resource": "${Token[TOKEN.156]}"
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "policyName": "${Token[TOKEN.161]}",
+                                    "groups": [
+                                      "#{Token[TOKEN.164]}"
+                                    ],
+                                    "roles": [
+                                      "#{Token[TOKEN.162]}"
+                                    ],
+                                    "users": [
+                                      "#{Token[TOKEN.163]}"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "Topic": {
+                        "id": "Topic",
+                        "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Topic",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Topic/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::SNS::Topic",
+                              "aws:cdk:cloudformation:props": {
+                                "tags": [
+                                  {
+                                    "key": "Name",
+                                    "value": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup"
+                                  }
+                                ],
+                                "topicName": "${Token[TOKEN.152]}"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::AutoScaling::LifecycleHook",
+                          "aws:cdk:cloudformation:props": {
+                            "autoScalingGroupName": "${Token[TOKEN.119]}",
+                            "lifecycleTransition": "autoscaling:EC2_INSTANCE_TERMINATING",
+                            "defaultResult": "CONTINUE",
+                            "heartbeatTimeout": 300,
+                            "lifecycleHookName": "${Token[TOKEN.142]}",
+                            "notificationTargetArn": "${Token[TOKEN.156]}",
+                            "roleArn": "${Token[TOKEN.149]}"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": {
+            "id": "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "path": "MicfinCdkStack/SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter"
+          },
+          "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118": {
+            "id": "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "path": "MicfinCdkStack/SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118"
+          },
+          "TaskDef": {
+            "id": "TaskDef",
+            "path": "MicfinCdkStack/TaskDef",
+            "children": {
+              "TaskRole": {
+                "id": "TaskRole",
+                "path": "MicfinCdkStack/TaskDef/TaskRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "MicfinCdkStack/TaskDef/TaskRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "${Token[ecs-tasks.amazonaws.com.175]}"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          "#{Token[TOKEN.176]}"
+                        ],
+                        "roleName": "${Token[TOKEN.174]}"
+                      }
+                    }
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "MicfinCdkStack/TaskDef/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::TaskDefinition",
+                  "aws:cdk:cloudformation:props": {
+                    "containerDefinitions": "<unresolved-lazy>",
+                    "executionRoleArn": "${Token[TOKEN.183]}",
+                    "family": "MicfinCdkStackTaskDef6FEBAE6C",
+                    "networkMode": "bridge",
+                    "placementConstraints": "<unresolved-lazy>",
+                    "requiresCompatibilities": [
+                      "EC2"
+                    ],
+                    "taskRoleArn": "${Token[TOKEN.180]}",
+                    "volumes": "<unresolved-lazy>"
+                  }
+                }
+              },
+              "web": {
+                "id": "web",
+                "path": "MicfinCdkStack/TaskDef/web"
+              }
+            }
+          },
+          "Service": {
+            "id": "Service",
+            "path": "MicfinCdkStack/Service",
+            "children": {
+              "Service": {
+                "id": "Service",
+                "path": "MicfinCdkStack/Service/Service",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::Service",
+                  "aws:cdk:cloudformation:props": {
+                    "taskDefinition": "${Token[TOKEN.185]}",
+                    "cluster": "${Token[TOKEN.90]}",
+                    "deploymentConfiguration": {
+                      "maximumPercent": 200,
+                      "minimumHealthyPercent": 50
+                    },
+                    "desiredCount": 1,
+                    "enableEcsManagedTags": false,
+                    "healthCheckGracePeriodSeconds": "<unresolved-lazy>",
+                    "launchType": "EC2",
+                    "loadBalancers": "<unresolved-lazy>",
+                    "networkConfiguration": "<unresolved-lazy>",
+                    "placementConstraints": "<unresolved-lazy>",
+                    "placementStrategies": "<unresolved-lazy>",
+                    "schedulingStrategy": "REPLICA",
+                    "serviceName": "${Token[TOKEN.186]}",
+                    "serviceRegistries": "<unresolved-lazy>"
+                  }
+                }
+              }
+            }
+          },
+          "LB": {
+            "id": "LB",
+            "path": "MicfinCdkStack/LB",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "MicfinCdkStack/LB/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+                  "aws:cdk:cloudformation:props": {
+                    "loadBalancerAttributes": "<unresolved-lazy>",
+                    "name": "${Token[TOKEN.193]}",
+                    "scheme": "internet-facing",
+                    "securityGroups": [
+                      "#{Token[TOKEN.192]}"
+                    ],
+                    "subnets": [
+                      "${Token[TOKEN.28]}",
+                      "${Token[TOKEN.40]}"
+                    ],
+                    "type": "application"
+                  }
+                }
+              },
+              "SecurityGroup": {
+                "id": "SecurityGroup",
+                "path": "MicfinCdkStack/LB/SecurityGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "MicfinCdkStack/LB/SecurityGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "groupDescription": "Automatically created Security Group for ELB MicfinCdkStackLB206CA8DD",
+                        "groupName": "${Token[TOKEN.201]}",
+                        "securityGroupEgress": "<unresolved-lazy>",
+                        "securityGroupIngress": "<unresolved-lazy>",
+                        "vpcId": "${Token[TOKEN.21]}"
+                      }
+                    }
+                  },
+                  "to MicfinCdkStackEcsClusterDefaultAutoScalingGroupInstanceSecurityGroupF197B75A:8080": {
+                    "id": "to MicfinCdkStackEcsClusterDefaultAutoScalingGroupInstanceSecurityGroupF197B75A:8080",
+                    "path": "MicfinCdkStack/LB/SecurityGroup/to MicfinCdkStackEcsClusterDefaultAutoScalingGroupInstanceSecurityGroupF197B75A:8080",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupEgress",
+                      "aws:cdk:cloudformation:props": {
+                        "groupId": "${Token[TOKEN.203]}",
+                        "ipProtocol": "tcp",
+                        "description": "Load balancer to target",
+                        "destinationSecurityGroupId": "${Token[TOKEN.94]}",
+                        "fromPort": 8080,
+                        "toPort": 8080
+                      }
+                    }
+                  }
+                }
+              },
+              "PublicListener": {
+                "id": "PublicListener",
+                "path": "MicfinCdkStack/LB/PublicListener",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "MicfinCdkStack/LB/PublicListener/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::Listener",
+                      "aws:cdk:cloudformation:props": {
+                        "defaultActions": "<unresolved-lazy>",
+                        "loadBalancerArn": "${Token[TOKEN.200]}",
+                        "port": 80,
+                        "protocol": "HTTP",
+                        "certificates": "<unresolved-lazy>"
+                      }
+                    }
+                  },
+                  "ECSGroup": {
+                    "id": "ECSGroup",
+                    "path": "MicfinCdkStack/LB/PublicListener/ECSGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "MicfinCdkStack/LB/PublicListener/ECSGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "healthCheckIntervalSeconds": -1.8881545897087955e+289,
+                            "healthCheckPath": "${Token[TOKEN.212]}",
+                            "healthCheckPort": "${Token[TOKEN.213]}",
+                            "healthCheckProtocol": "${Token[TOKEN.214]}",
+                            "healthCheckTimeoutSeconds": -1.8881545897087963e+289,
+                            "healthyThresholdCount": -1.8881545897087966e+289,
+                            "matcher": "<unresolved-lazy>",
+                            "port": 80,
+                            "protocol": "HTTP",
+                            "targetGroupAttributes": "<unresolved-lazy>",
+                            "targets": "<unresolved-lazy>",
+                            "targetType": "${Token[TOKEN.209]}",
+                            "unhealthyThresholdCount": -1.8881545897087968e+289,
+                            "vpcId": "${Token[TOKEN.210]}"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "LoadBalancerDNS": {
+            "id": "LoadBalancerDNS",
+            "path": "MicfinCdkStack/LoadBalancerDNS"
+          }
+        }
+      }
+    }
+  }
+}

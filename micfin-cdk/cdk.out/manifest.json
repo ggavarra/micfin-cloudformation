@@ -1,0 +1,1248 @@
+{
+  "version": "1.16.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "MicfinCdkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "MicfinCdkStack.template.json"
+      },
+      "metadata": {
+        "/MicfinCdkStack/MicFinVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpc5A0C7864",
+            "trace": [
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:259:25)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet1SubnetAE6F508E",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:540:24)",
+              "new PublicSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:690:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:469:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet1RouteTable76144803",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:555:23)",
+              "new PublicSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:690:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:469:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet1RouteTableAssociationC5FC676E",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:560:9)",
+              "new PublicSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:690:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:469:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet1DefaultRoute76232AEA",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:580:23)",
+              "Vpc.publicSubnets.forEach.publicSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:290:30)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:289:32)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet1EIPA12007DC",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:701:27)",
+              "NatGateway.configureNat (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:49:33)",
+              "Vpc.createNatGateways (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:427:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:295:22)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet1NATGateway90BFE16D",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:699:21)",
+              "NatGateway.configureNat (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:49:33)",
+              "Vpc.createNatGateways (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:427:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:295:22)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet2Subnet9AA989BF",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:540:24)",
+              "new PublicSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:690:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:469:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet2RouteTable857EC995",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:555:23)",
+              "new PublicSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:690:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:469:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet2RouteTableAssociationDDA91E99",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:560:9)",
+              "new PublicSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:690:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:469:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet2DefaultRoute92B6168D",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:580:23)",
+              "Vpc.publicSubnets.forEach.publicSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:290:30)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:289:32)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet2EIP3A553515",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:701:27)",
+              "NatGateway.configureNat (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:49:33)",
+              "Vpc.createNatGateways (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:427:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:295:22)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPublicSubnet2NATGateway9E81E548",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:699:21)",
+              "NatGateway.configureNat (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:49:33)",
+              "Vpc.createNatGateways (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:427:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:295:22)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPrivateSubnet1Subnet3C874E48",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:540:24)",
+              "new PrivateSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:717:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:474:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPrivateSubnet1RouteTable994CFA02",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:555:23)",
+              "new PrivateSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:717:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:474:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPrivateSubnet1RouteTableAssociationBAA4D0F3",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:560:9)",
+              "new PrivateSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:717:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:474:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPrivateSubnet1DefaultRoute93A5CB4C",
+            "trace": [
+              "PrivateSubnet.addRoute (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:621:23)",
+              "NatGateway.configureNat (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:54:17)",
+              "Vpc.createNatGateways (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:427:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:295:22)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPrivateSubnet2SubnetC7F4DE5D",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:540:24)",
+              "new PrivateSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:717:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:474:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPrivateSubnet2RouteTableE7CEB85C",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:555:23)",
+              "new PrivateSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:717:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:474:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPrivateSubnet2RouteTableAssociation5AE51E71",
+            "trace": [
+              "new Subnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:560:9)",
+              "new PrivateSubnet (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:717:9)",
+              "availabilityZones.forEach (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:474:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:453:32)",
+              "Vpc.createSubnets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:449:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:279:14)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcPrivateSubnet2DefaultRoute2D692C2D",
+            "trace": [
+              "PrivateSubnet.addRoute (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:621:23)",
+              "NatGateway.configureNat (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:54:17)",
+              "Vpc.createNatGateways (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:427:18)",
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:295:22)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcIGW651513B2",
+            "trace": [
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:283:25)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/MicFinVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MicFinVpcVPCGW0F7BDFF4",
+            "trace": [
+              "new Vpc (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:285:25)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsCluster97242B84",
+            "trace": [
+              "new Cluster (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:31:25)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupInstanceSecurityGroup912E1231",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:131:30)",
+              "new AutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:92:30)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:89:34)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup/from MicfinCdkStackLBSecurityGroupF2681DE5:8080": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupInstanceSecurityGroupfromMicfinCdkStackLBSecurityGroupF2681DE58080DBC06E99",
+            "trace": [
+              "SecurityGroup.addIngressRule (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:33:13)",
+              "SecurityGroup.addIngressRule (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:177:19)",
+              "other.connections._securityGroupRules.forEachAndForever.rule (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:89:31)",
+              "ReactiveList.forEachAndForever (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:191:13)",
+              "_securityGroups.forEachAndForever.securityGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:88:51)",
+              "ReactiveList.forEachAndForever (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:191:13)",
+              "Connections.allowFrom (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:87:30)",
+              "ApplicationListener.registerConnectable (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:186:33)",
+              "ApplicationTargetGroup.registerListener (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:87:22)",
+              "ApplicationListener.addDefaultTargetGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:203:21)",
+              "ApplicationListener.addTargetGroups (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:96:22)",
+              "ApplicationListener.addTargets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:127:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupInstanceRole3C026863",
+            "trace": [
+              "new Role (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "new AutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:99:35)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:89:34)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupInstanceRoleDefaultPolicy04DC6C80",
+            "trace": [
+              "new Policy (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:29:26)",
+              "Role.addToPolicy (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "AutoScalingGroup.addToRolePolicy (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:260:19)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:118:26)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupInstanceProfile2CE606B3",
+            "trace": [
+              "new AutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:104:28)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:89:34)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LaunchConfig": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupLaunchConfigB7E376C1",
+            "trace": [
+              "new AutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:112:30)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:89:34)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/ASG": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupASGC1A785DB",
+            "trace": [
+              "new AutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:185:33)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:89:34)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionServiceRole94543EDA",
+            "trace": [
+              "new Role (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "new Function (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:59:35)",
+              "new InstanceDrainHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.js:21:20)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:135:13)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionServiceRoleDefaultPolicyA45BF396",
+            "trace": [
+              "new Policy (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:29:26)",
+              "Role.addToPolicy (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "Function.addToRolePolicy (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:37:19)",
+              "new InstanceDrainHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.js:41:12)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:135:13)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionE17A5F5E",
+            "trace": [
+              "new Function (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:75:26)",
+              "new InstanceDrainHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.js:21:20)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:135:13)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/AllowInvoke:MicfinCdkStackEcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicAACCD7CB": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionAllowInvokeMicfinCdkStackEcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicAACCD7CB23012C00",
+            "trace": [
+              "Function.addPermission (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:21:9)",
+              "LambdaSubscription.bind (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-sns-subscriptions\\lib\\lambda.js:20:17)",
+              "Topic.addSubscription (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.js:15:49)",
+              "FunctionHook.bind (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling-hooktargets\\lib\\lambda-hook.js:17:15)",
+              "new LifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.js:17:54)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:21:16)",
+              "new InstanceDrainHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.js:33:32)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:135:13)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/DrainECSHook/Function/Topic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupDrainECSHookFunctionTopic8F34E394",
+            "trace": [
+              "new Subscription (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-sns\\lib\\subscription.js:29:9)",
+              "Topic.addSubscription (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.js:23:9)",
+              "FunctionHook.bind (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling-hooktargets\\lib\\lambda-hook.js:17:15)",
+              "new LifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.js:17:54)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:21:16)",
+              "new InstanceDrainHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.js:33:32)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:135:13)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookRoleA38EC83B",
+            "trace": [
+              "new Role (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "new LifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.js:14:35)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:21:16)",
+              "new InstanceDrainHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.js:33:32)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:135:13)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookRoleDefaultPolicy75002F88",
+            "trace": [
+              "new Policy (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:29:26)",
+              "Role.addToPolicy (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "Function.addToPrincipal (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:54:65)",
+              "Function.addToPrincipalOrResource (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:31:30)",
+              "Topic.grantPublish (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.js:44:26)",
+              "TopicHook.bind (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling-hooktargets\\lib\\topic-hook.js:11:20)",
+              "FunctionHook.bind (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling-hooktargets\\lib\\lambda-hook.js:18:50)",
+              "new LifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.js:17:54)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:21:16)",
+              "new InstanceDrainHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.js:33:32)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:135:13)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Topic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookTopicACD2D4A4",
+            "trace": [
+              "new Topic (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic.js:15:26)",
+              "FunctionHook.bind (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling-hooktargets\\lib\\lambda-hook.js:16:23)",
+              "new LifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.js:17:54)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:21:16)",
+              "new InstanceDrainHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.js:33:32)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:135:13)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/LifecycleHookDrainHook/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsClusterDefaultAutoScalingGroupLifecycleHookDrainHookFFA63029",
+            "trace": [
+              "new LifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.js:18:26)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:21:16)",
+              "new InstanceDrainHook (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.js:33:32)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:135:13)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:90:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ssm\\lib\\parameter.js:104:15)",
+              "Function.valueForTypedStringParameter (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ssm\\lib\\parameter.js:171:21)",
+              "EcsOptimizedAmi.getImage (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:236:41)",
+              "new AutoScalingGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.js:108:48)",
+              "Cluster.addCapacity (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:89:34)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskDefTaskRole1EDB4A67",
+            "trace": [
+              "new Role (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "new TaskDefinition (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:63:43)",
+              "new Ec2TaskDefinition (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\ec2\\ec2-task-definition.js:30:9)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskDef54694570",
+            "trace": [
+              "new TaskDefinition (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:66:25)",
+              "new Ec2TaskDefinition (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\ec2\\ec2-task-definition.js:30:9)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/TaskDef/web": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "Proper policies need to be attached before pulling from ECR repository, or use 'fromEcrRepository'.",
+            "trace": [
+              "ConstructNode.addWarning (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\core\\lib\\construct.js:277:14)",
+              "RepositoryImage.bind (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\repository.js:27:24)",
+              "new ContainerDefinition (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:76:40)",
+              "Ec2TaskDefinition.addContainer (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:159:16)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceD69D759B",
+            "trace": [
+              "new BaseService (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:98:25)",
+              "new Ec2Service (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ecs\\lib\\ec2\\ec2-service.js:33:9)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LB8A12904C",
+            "trace": [
+              "new BaseLoadBalancer (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-load-balancer.js:23:26)",
+              "new ApplicationLoadBalancer (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.js:16:9)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBSecurityGroup8A41EA2B",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:131:30)",
+              "new ApplicationLoadBalancer (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.js:21:53)",
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/LB/SecurityGroup/to MicfinCdkStackEcsClusterDefaultAutoScalingGroupInstanceSecurityGroupF197B75A:8080": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBSecurityGrouptoMicfinCdkStackEcsClusterDefaultAutoScalingGroupInstanceSecurityGroupF197B75A8080F1752E4B",
+            "trace": [
+              "SecurityGroup.addEgressRule (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:43:13)",
+              "SecurityGroup.addEgressRule (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:199:19)",
+              "other.connections._securityGroupRules.forEachAndForever.rule (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:66:31)",
+              "ReactiveList.forEachAndForever (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:191:13)",
+              "_securityGroups.forEachAndForever.securityGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:65:51)",
+              "ReactiveList.forEachAndForever (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:191:13)",
+              "Connections.allowTo (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:64:30)",
+              "Connections.allowFrom (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.js:95:31)",
+              "ApplicationListener.registerConnectable (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:186:33)",
+              "ApplicationTargetGroup.registerListener (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:87:22)",
+              "ApplicationListener.addDefaultTargetGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:203:21)",
+              "ApplicationListener.addTargetGroups (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:96:22)",
+              "ApplicationListener.addTargets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:127:14)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBPublicListener6E1F3D94",
+            "trace": [
+              "new BaseListener (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-listener.js:12:26)",
+              "new ApplicationListener (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:22:9)",
+              "ApplicationLoadBalancer.addListener (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.js:64:16)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBPublicListenerECSGroupD6A32205",
+            "trace": [
+              "new TargetGroupBase (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-target-group.js:31:25)",
+              "new ApplicationTargetGroup (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.js:15:9)",
+              "ApplicationListener.addTargets (C:\\Users\\prith\\AppData\\Local\\Temp\\jsii-kernel-IXHl0u\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.js:116:23)",
+              "_wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:51)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "ret._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7574:25)",
+              "Kernel._ensureSync (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8170:20)",
+              "Kernel.invoke (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7573:26)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/MicfinCdkStack/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LoadBalancerDNS",
+            "trace": [
+              "obj._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:49)",
+              "Kernel._wrapSandboxCode (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8194:20)",
+              "Kernel._create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7741:26)",
+              "Kernel.create (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7495:21)",
+              "KernelHost.processRequest (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7285:28)",
+              "KernelHost.run (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7225:14)",
+              "Immediate.setImmediate [as _onImmediate] (C:\\Users\\prith\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7228:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cx-api": "1.16.3",
+      "@aws-cdk/core": "1.16.3",
+      "@aws-cdk/region-info": "1.16.3",
+      "@aws-cdk/aws-iam": "1.16.3",
+      "@aws-cdk/aws-cloudwatch": "1.16.3",
+      "@aws-cdk/aws-kms": "1.16.3",
+      "@aws-cdk/aws-ssm": "1.16.3",
+      "@aws-cdk/aws-ec2": "1.16.3",
+      "@aws-cdk/aws-autoscaling-common": "1.16.3",
+      "@aws-cdk/aws-applicationautoscaling": "1.16.3",
+      "@aws-cdk/aws-elasticloadbalancing": "1.16.3",
+      "@aws-cdk/aws-events": "1.16.3",
+      "@aws-cdk/aws-logs": "1.16.3",
+      "@aws-cdk/aws-s3": "1.16.3",
+      "@aws-cdk/assets": "1.16.3",
+      "@aws-cdk/aws-s3-assets": "1.16.3",
+      "@aws-cdk/aws-sqs": "1.16.3",
+      "@aws-cdk/aws-lambda": "1.16.3",
+      "@aws-cdk/aws-sns": "1.16.3",
+      "@aws-cdk/aws-cloudformation": "1.16.3",
+      "@aws-cdk/aws-route53": "1.16.3",
+      "@aws-cdk/aws-certificatemanager": "1.16.3",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.16.3",
+      "@aws-cdk/aws-autoscaling": "1.16.3",
+      "@aws-cdk/aws-sns-subscriptions": "1.16.3",
+      "@aws-cdk/aws-autoscaling-hooktargets": "1.16.3",
+      "@aws-cdk/aws-ecr": "1.16.3",
+      "@aws-cdk/aws-ecr-assets": "1.16.3",
+      "@aws-cdk/aws-apigateway": "1.16.3",
+      "@aws-cdk/aws-cloudfront": "1.16.3",
+      "@aws-cdk/aws-route53-targets": "1.16.3",
+      "@aws-cdk/aws-secretsmanager": "1.16.3",
+      "@aws-cdk/aws-servicediscovery": "1.16.3",
+      "@aws-cdk/aws-ecs": "1.16.3",
+      "jsii-runtime": "Python/3.7.4"
+    }
+  }
+}
