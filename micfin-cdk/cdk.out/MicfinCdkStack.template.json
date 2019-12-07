@@ -471,30 +471,6 @@
         "aws:cdk:path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup/Resource"
       }
     },
-    "EcsClusterDefaultAutoScalingGroupInstanceSecurityGroupfromMicfinCdkStackLBSecurityGroupF2681DE58080DBC06E99": {
-      "Type": "AWS::EC2::SecurityGroupIngress",
-      "Properties": {
-        "IpProtocol": "tcp",
-        "Description": "Load balancer to target",
-        "FromPort": 8080,
-        "GroupId": {
-          "Fn::GetAtt": [
-            "EcsClusterDefaultAutoScalingGroupInstanceSecurityGroup912E1231",
-            "GroupId"
-          ]
-        },
-        "SourceSecurityGroupId": {
-          "Fn::GetAtt": [
-            "LBSecurityGroup8A41EA2B",
-            "GroupId"
-          ]
-        },
-        "ToPort": 8080
-      },
-      "Metadata": {
-        "aws:cdk:path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup/from MicfinCdkStackLBSecurityGroupF2681DE5:8080"
-      }
-    },
     "EcsClusterDefaultAutoScalingGroupInstanceRole3C026863": {
       "Type": "AWS::IAM::Role",
       "Properties": {
@@ -585,7 +561,7 @@
         "ImageId": {
           "Ref": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
         },
-        "InstanceType": "t2.xlarge",
+        "InstanceType": "t2.micro",
         "IamInstanceProfile": {
           "Ref": "EcsClusterDefaultAutoScalingGroupInstanceProfile2CE606B3"
         },
@@ -623,9 +599,9 @@
     "EcsClusterDefaultAutoScalingGroupASGC1A785DB": {
       "Type": "AWS::AutoScaling::AutoScalingGroup",
       "Properties": {
-        "MaxSize": "1",
+        "MaxSize": "3",
         "MinSize": "1",
-        "DesiredCapacity": "1",
+        "DesiredCapacity": "3",
         "LaunchConfigurationName": {
           "Ref": "EcsClusterDefaultAutoScalingGroupLaunchConfigB7E376C1"
         },
@@ -1029,138 +1005,11 @@
         },
         "DesiredCount": 1,
         "EnableECSManagedTags": false,
-        "HealthCheckGracePeriodSeconds": 60,
         "LaunchType": "EC2",
-        "LoadBalancers": [
-          {
-            "ContainerName": "web",
-            "ContainerPort": 80,
-            "TargetGroupArn": {
-              "Ref": "LBPublicListenerECSGroupD6A32205"
-            }
-          }
-        ],
         "SchedulingStrategy": "REPLICA"
       },
-      "DependsOn": [
-        "LBPublicListenerECSGroupD6A32205",
-        "LBPublicListener6E1F3D94"
-      ],
       "Metadata": {
         "aws:cdk:path": "MicfinCdkStack/Service/Service"
-      }
-    },
-    "LB8A12904C": {
-      "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
-      "Properties": {
-        "Scheme": "internet-facing",
-        "SecurityGroups": [
-          {
-            "Fn::GetAtt": [
-              "LBSecurityGroup8A41EA2B",
-              "GroupId"
-            ]
-          }
-        ],
-        "Subnets": [
-          {
-            "Ref": "MicFinVpcPublicSubnet1SubnetAE6F508E"
-          },
-          {
-            "Ref": "MicFinVpcPublicSubnet2Subnet9AA989BF"
-          }
-        ],
-        "Type": "application"
-      },
-      "DependsOn": [
-        "MicFinVpcPublicSubnet1DefaultRoute76232AEA",
-        "MicFinVpcPublicSubnet2DefaultRoute92B6168D"
-      ],
-      "Metadata": {
-        "aws:cdk:path": "MicfinCdkStack/LB/Resource"
-      }
-    },
-    "LBSecurityGroup8A41EA2B": {
-      "Type": "AWS::EC2::SecurityGroup",
-      "Properties": {
-        "GroupDescription": "Automatically created Security Group for ELB MicfinCdkStackLB206CA8DD",
-        "SecurityGroupIngress": [
-          {
-            "CidrIp": "0.0.0.0/0",
-            "Description": "Allow from anyone on port 80",
-            "FromPort": 80,
-            "IpProtocol": "tcp",
-            "ToPort": 80
-          }
-        ],
-        "VpcId": {
-          "Ref": "MicFinVpc5A0C7864"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "MicfinCdkStack/LB/SecurityGroup/Resource"
-      }
-    },
-    "LBSecurityGrouptoMicfinCdkStackEcsClusterDefaultAutoScalingGroupInstanceSecurityGroupF197B75A8080F1752E4B": {
-      "Type": "AWS::EC2::SecurityGroupEgress",
-      "Properties": {
-        "GroupId": {
-          "Fn::GetAtt": [
-            "LBSecurityGroup8A41EA2B",
-            "GroupId"
-          ]
-        },
-        "IpProtocol": "tcp",
-        "Description": "Load balancer to target",
-        "DestinationSecurityGroupId": {
-          "Fn::GetAtt": [
-            "EcsClusterDefaultAutoScalingGroupInstanceSecurityGroup912E1231",
-            "GroupId"
-          ]
-        },
-        "FromPort": 8080,
-        "ToPort": 8080
-      },
-      "Metadata": {
-        "aws:cdk:path": "MicfinCdkStack/LB/SecurityGroup/to MicfinCdkStackEcsClusterDefaultAutoScalingGroupInstanceSecurityGroupF197B75A:8080"
-      }
-    },
-    "LBPublicListener6E1F3D94": {
-      "Type": "AWS::ElasticLoadBalancingV2::Listener",
-      "Properties": {
-        "DefaultActions": [
-          {
-            "TargetGroupArn": {
-              "Ref": "LBPublicListenerECSGroupD6A32205"
-            },
-            "Type": "forward"
-          }
-        ],
-        "LoadBalancerArn": {
-          "Ref": "LB8A12904C"
-        },
-        "Port": 80,
-        "Protocol": "HTTP"
-      },
-      "Metadata": {
-        "aws:cdk:path": "MicfinCdkStack/LB/PublicListener/Resource"
-      }
-    },
-    "LBPublicListenerECSGroupD6A32205": {
-      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
-      "Properties": {
-        "HealthCheckIntervalSeconds": 60,
-        "HealthCheckPath": "/health",
-        "HealthCheckTimeoutSeconds": 5,
-        "Port": 80,
-        "Protocol": "HTTP",
-        "TargetType": "instance",
-        "VpcId": {
-          "Ref": "MicFinVpc5A0C7864"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "MicfinCdkStack/LB/PublicListener/ECSGroup/Resource"
       }
     }
   },
@@ -1168,16 +1017,6 @@
     "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter": {
       "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
       "Default": "/aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id"
-    }
-  },
-  "Outputs": {
-    "LoadBalancerDNS": {
-      "Value": {
-        "Fn::GetAtt": [
-          "LB8A12904C",
-          "DNSName"
-        ]
-      }
     }
   }
 }

@@ -462,21 +462,6 @@
                             "vpcId": "${Token[TOKEN.21]}"
                           }
                         }
-                      },
-                      "from MicfinCdkStackLBSecurityGroupF2681DE5:8080": {
-                        "id": "from MicfinCdkStackLBSecurityGroupF2681DE5:8080",
-                        "path": "MicfinCdkStack/EcsCluster/DefaultAutoScalingGroup/InstanceSecurityGroup/from MicfinCdkStackLBSecurityGroupF2681DE5:8080",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
-                          "aws:cdk:cloudformation:props": {
-                            "ipProtocol": "tcp",
-                            "description": "Load balancer to target",
-                            "fromPort": 8080,
-                            "groupId": "${Token[TOKEN.94]}",
-                            "sourceSecurityGroupId": "${Token[TOKEN.203]}",
-                            "toPort": 8080
-                          }
-                        }
                       }
                     }
                   },
@@ -582,7 +567,7 @@
                       "aws:cdk:cloudformation:type": "AWS::AutoScaling::LaunchConfiguration",
                       "aws:cdk:cloudformation:props": {
                         "imageId": "${Token[TOKEN.109]}",
-                        "instanceType": "t2.xlarge",
+                        "instanceType": "t2.micro",
                         "iamInstanceProfile": "${Token[TOKEN.113]}",
                         "securityGroups": [
                           "#{Token[TOKEN.112]}"
@@ -597,9 +582,9 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::AutoScaling::AutoScalingGroup",
                       "aws:cdk:cloudformation:props": {
-                        "maxSize": "1",
+                        "maxSize": "3",
                         "minSize": "1",
-                        "desiredCapacity": "1",
+                        "desiredCapacity": "3",
                         "launchConfigurationName": "${Token[TOKEN.115]}",
                         "loadBalancerNames": [
                           "#{Token[TOKEN.116]}"
@@ -1022,120 +1007,6 @@
                 }
               }
             }
-          },
-          "LB": {
-            "id": "LB",
-            "path": "MicfinCdkStack/LB",
-            "children": {
-              "Resource": {
-                "id": "Resource",
-                "path": "MicfinCdkStack/LB/Resource",
-                "attributes": {
-                  "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
-                  "aws:cdk:cloudformation:props": {
-                    "loadBalancerAttributes": "<unresolved-lazy>",
-                    "name": "${Token[TOKEN.193]}",
-                    "scheme": "internet-facing",
-                    "securityGroups": [
-                      "#{Token[TOKEN.192]}"
-                    ],
-                    "subnets": [
-                      "${Token[TOKEN.28]}",
-                      "${Token[TOKEN.40]}"
-                    ],
-                    "type": "application"
-                  }
-                }
-              },
-              "SecurityGroup": {
-                "id": "SecurityGroup",
-                "path": "MicfinCdkStack/LB/SecurityGroup",
-                "children": {
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "MicfinCdkStack/LB/SecurityGroup/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
-                      "aws:cdk:cloudformation:props": {
-                        "groupDescription": "Automatically created Security Group for ELB MicfinCdkStackLB206CA8DD",
-                        "groupName": "${Token[TOKEN.201]}",
-                        "securityGroupEgress": "<unresolved-lazy>",
-                        "securityGroupIngress": "<unresolved-lazy>",
-                        "vpcId": "${Token[TOKEN.21]}"
-                      }
-                    }
-                  },
-                  "to MicfinCdkStackEcsClusterDefaultAutoScalingGroupInstanceSecurityGroupF197B75A:8080": {
-                    "id": "to MicfinCdkStackEcsClusterDefaultAutoScalingGroupInstanceSecurityGroupF197B75A:8080",
-                    "path": "MicfinCdkStack/LB/SecurityGroup/to MicfinCdkStackEcsClusterDefaultAutoScalingGroupInstanceSecurityGroupF197B75A:8080",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupEgress",
-                      "aws:cdk:cloudformation:props": {
-                        "groupId": "${Token[TOKEN.203]}",
-                        "ipProtocol": "tcp",
-                        "description": "Load balancer to target",
-                        "destinationSecurityGroupId": "${Token[TOKEN.94]}",
-                        "fromPort": 8080,
-                        "toPort": 8080
-                      }
-                    }
-                  }
-                }
-              },
-              "PublicListener": {
-                "id": "PublicListener",
-                "path": "MicfinCdkStack/LB/PublicListener",
-                "children": {
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "MicfinCdkStack/LB/PublicListener/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::Listener",
-                      "aws:cdk:cloudformation:props": {
-                        "defaultActions": "<unresolved-lazy>",
-                        "loadBalancerArn": "${Token[TOKEN.200]}",
-                        "port": 80,
-                        "protocol": "HTTP",
-                        "certificates": "<unresolved-lazy>"
-                      }
-                    }
-                  },
-                  "ECSGroup": {
-                    "id": "ECSGroup",
-                    "path": "MicfinCdkStack/LB/PublicListener/ECSGroup",
-                    "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "MicfinCdkStack/LB/PublicListener/ECSGroup/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::TargetGroup",
-                          "aws:cdk:cloudformation:props": {
-                            "healthCheckIntervalSeconds": -1.8881545897087955e+289,
-                            "healthCheckPath": "${Token[TOKEN.212]}",
-                            "healthCheckPort": "${Token[TOKEN.213]}",
-                            "healthCheckProtocol": "${Token[TOKEN.214]}",
-                            "healthCheckTimeoutSeconds": -1.8881545897087963e+289,
-                            "healthyThresholdCount": -1.8881545897087966e+289,
-                            "matcher": "<unresolved-lazy>",
-                            "port": 80,
-                            "protocol": "HTTP",
-                            "targetGroupAttributes": "<unresolved-lazy>",
-                            "targets": "<unresolved-lazy>",
-                            "targetType": "${Token[TOKEN.209]}",
-                            "unhealthyThresholdCount": -1.8881545897087968e+289,
-                            "vpcId": "${Token[TOKEN.210]}"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "LoadBalancerDNS": {
-            "id": "LoadBalancerDNS",
-            "path": "MicfinCdkStack/LoadBalancerDNS"
           }
         }
       }

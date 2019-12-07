@@ -3,6 +3,7 @@ from aws_cdk import (
     aws_ecs as ecs,
     aws_elasticloadbalancingv2 as elbv2,
     core,
+    aws_autoscaling as autoscaling
 )
 
 
@@ -25,9 +26,8 @@ class MicfinCdkStack(core.Stack):
                              instance_type=ec2.InstanceType("t2.micro"),
                              machine_image=ecs.EcsOptimizedAmi(),
                              update_type=autoscaling.UpdateType.REPLACING_UPDATE,
-                             desired_capacity=3,
-                             vpc=vpc,
-                             vpc_subnets={'subnet_type': ec2.SubnetType.PUBLIC},
+                             desired_capacity=1
+
                              )
 
 
@@ -37,7 +37,7 @@ class MicfinCdkStack(core.Stack):
         container = task_definition.add_container(
             "web",
             image=ecs.ContainerImage.from_registry("210525354699.dkr.ecr.ap-southeast-1.amazonaws.com/micfin-repo"),
-            memory_limit_mib=256
+            memory_limit_mib=512
         )
         port_mapping = ecs.PortMapping(
             container_port=80,
@@ -46,6 +46,7 @@ class MicfinCdkStack(core.Stack):
         )
         container.add_port_mappings(port_mapping)
 
+
         # Create Service
         service = ecs.Ec2Service(
             self, "Service",
@@ -53,7 +54,7 @@ class MicfinCdkStack(core.Stack):
             task_definition=task_definition
         )
 
-        # # Create ALB
+        # Create ALB
         # lb = elbv2.ApplicationLoadBalancer(
         #     self, "LB",
         #     vpc=vpc,
@@ -78,7 +79,7 @@ class MicfinCdkStack(core.Stack):
         #     targets=[service],
         #     health_check=health_check,
         # )
-
+        #
         # core.CfnOutput(
         #     self, "LoadBalancerDNS",
         #     value=lb.load_balancer_dns_name
