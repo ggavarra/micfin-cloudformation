@@ -22,8 +22,13 @@ class MicfinCdkStack(core.Stack):
             vpc=vpc
         )
         cluster.add_capacity("DefaultAutoScalingGroup",
-                             instance_type=ec2.InstanceType("t2.xlarge"),
-                             machine_image=ecs.EcsOptimizedAmi())
+                             instance_type=ec2.InstanceType("t2.micro"),
+                             machine_image=ecs.EcsOptimizedAmi(),
+                             update_type=autoscaling.UpdateType.REPLACING_UPDATE,
+                             desired_capacity=3,
+                             vpc=vpc,
+                             vpc_subnets={'subnet_type': ec2.SubnetType.PUBLIC},
+                             )
 
 
         # Create Task Definition
@@ -48,35 +53,35 @@ class MicfinCdkStack(core.Stack):
             task_definition=task_definition
         )
 
-        # Create ALB
-        lb = elbv2.ApplicationLoadBalancer(
-            self, "LB",
-            vpc=vpc,
-            internet_facing=True
-        )
-        listener = lb.add_listener(
-            "PublicListener",
-            port=80,
-            open=True
-        )
+        # # Create ALB
+        # lb = elbv2.ApplicationLoadBalancer(
+        #     self, "LB",
+        #     vpc=vpc,
+        #     internet_facing=True
+        # )
+        # listener = lb.add_listener(
+        #     "PublicListener",
+        #     port=80,
+        #     open=True
+        # )
+        #
+        # health_check = elbv2.HealthCheck(
+        #     interval=core.Duration.seconds(60),
+        #     path="/health",
+        #     timeout=core.Duration.seconds(5)
+        # )
+        #
+        # # Attach ALB to ECS Service
+        # listener.add_targets(
+        #     "ECS",
+        #     port=80,
+        #     targets=[service],
+        #     health_check=health_check,
+        # )
 
-        health_check = elbv2.HealthCheck(
-            interval=core.Duration.seconds(60),
-            path="/health",
-            timeout=core.Duration.seconds(5)
-        )
-
-        # Attach ALB to ECS Service
-        listener.add_targets(
-            "ECS",
-            port=80,
-            targets=[service],
-            health_check=health_check,
-        )
-
-        core.CfnOutput(
-            self, "LoadBalancerDNS",
-            value=lb.load_balancer_dns_name
-        )
+        # core.CfnOutput(
+        #     self, "LoadBalancerDNS",
+        #     value=lb.load_balancer_dns_name
+        # )
 
 
