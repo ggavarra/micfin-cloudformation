@@ -37,7 +37,8 @@ class MicfinCdkStack(core.Stack):
         container = task_definition.add_container(
             "web",
             image=ecs.ContainerImage.from_registry("210525354699.dkr.ecr.ap-southeast-1.amazonaws.com/micfin-repo"),
-            memory_limit_mib=512
+            memory_limit_mib=512,
+            logging=ecs.LogDrivers.awslogs({streamPrefix: 'EventDemo'})
         )
         port_mapping = ecs.PortMapping(
             container_port=80,
